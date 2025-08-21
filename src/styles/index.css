@@ -1,0 +1,30 @@
+/**
+ * index.css - Entry point modular
+ * Orquestador de imports siguiendo orden de cascada CSS
+ * Arquitectura modular para mantenibilidad y escalabilidad
+ */
+
+/* ==========================================
+ * FRAMEWORK BASE - Tailwind import
+ * ========================================== */
+@import 'tailwindcss';
+
+/* ==========================================
+ * DESIGN SYSTEM - Orden de importación crítico
+ * Respeta cascada CSS y especificidad
+ * ========================================== */
+
+/* 1. Fuentes - Mayor prioridad, definición de recursos */
+@import './fonts.css';
+
+/* 2. Variables - Design tokens, base del sistema */
+@import './variables.css';
+
+/* 3. Base - Configuración global y reset selectivo */
+@import './base.css';
+
+/* 4. Utilidades - Clases helper responsive */
+@import './utilities.css';
+
+/* 5. Animaciones - Keyframes y motion (último por performance) */
+@import './animations.css';

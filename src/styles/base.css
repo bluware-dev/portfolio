@@ -1,0 +1,31 @@
+/**
+ * base.css
+ * Configuración base del documento y estilos globales
+ * Reset selectivo y configuración inicial del viewport
+ */
+
+/**
+ * Configuración global HTML
+ * Establece fuente base y esquema de color del documento
+ */
+html {
+	font-family: var(--font-terminess); /* Fuente principal del sistema */
+	background-color: #32302f; /* Color de fondo base */
+	color: var(--color-lg-1); /* Color de texto por defecto */
+}
+
+/* ==========================================
+ * SCROLLBAR CUSTOMIZATION - WebKit browsers
+ * Reset completo para UI limpia
+ * ========================================== */
+
+/**
+ * Oculta scrollbar manteniendo funcionalidad
+ * Compatible con WebKit (Chrome, Safari, Edge)
+ * Alternativa: scrollbar-width: none; para Firefox
+ */
+::-webkit-scrollbar {
+	width: 0; /* Elimina espacio del scrollbar */
+	scrollbar-width: none;
+	background: transparent; /* Fondo transparente para invisibilidad total */
+}
