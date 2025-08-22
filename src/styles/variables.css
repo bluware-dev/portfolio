@@ -1,0 +1,87 @@
+/**
+ * variables.css
+ * Design tokens centralizados para el sistema de colores y propiedades custom
+ * Siguiendo arquitectura atomic design para tokens reutilizables
+ */
+
+@theme {
+	/* ==========================================
+	 * PALETA NOMINAL - Colores base del sistema
+	 * ========================================== */
+	--color-night: #131516;
+	--color-eerie-black: #1e1f1f;
+	--color-raisin-black: #282828;
+	--color-jet: #353431;
+	--color-khaki: #afa387;
+	--color-dun: #d2c4a2;
+	--color-dutch-white: #e0d2b1;
+	--color-pearl: #f1e6ca;
+
+	/* ==========================================
+	 * ALIAS FUNCIONALES - Semantic tokens
+	 * Mapeo de colores nominales a uso semántico
+	 * ========================================== */
+	
+	/* Escala de grises oscuros */
+	--color-dg-0: var(--color-night);
+	--color-dg-1: var(--color-eerie-black);
+	--color-dg-2: var(--color-raisin-black);
+	--color-dg-3: var(--color-jet);
+
+	/* Escala de grises claros */
+	--color-lg-0: var(--color-khaki);
+	--color-lg-1: var(--color-dun);
+	--color-lg-2: var(--color-dutch-white);
+	--color-lg-3: var(--color-pearl);
+
+	/* ==========================================
+	 * SISTEMA DE ACENTOS - Paleta funcional
+	 * Tres niveles de intensidad por color
+	 * ========================================== */
+	
+	/* Acentos suaves y desaturados - uso general */
+	--color-accent-red: #ea6962;
+	--color-accent-orange: #e78a4e;
+	--color-accent-yellow: #d8a657;
+	--color-accent-green: #a9b665;
+	--color-accent-teal: #7daea3;
+	--color-accent-blue: #5c9bd9;
+	--color-accent-purple: #d3869b;
+
+	/* Acentos medios (bold) — para glow, hover, outlines */
+	--color-accent-red-bold: #d1463c;
+	--color-accent-orange-bold: #d6702d;
+	--color-accent-yellow-bold: #cfa13a;
+	--color-accent-green-bold: #659817;
+	--color-accent-teal-bold: #63968d;
+	--color-accent-blue-bold: #3868c3;
+	--color-accent-purple-bold: #bb3180;
+
+	/* Acentos oscuros y potentes - estados activos/críticos */
+	--color-accent-red-dark: #b02929;
+	--color-accent-orange-dark: #c45d18;
+	--color-accent-yellow-dark: #a87c19;
+	--color-accent-green-dark: #5f8c1f;
+	--color-accent-blue-dark: #2a4fb5;
+	--color-accent-teal-dark: #49726c;
+	--color-accent-purple-dark: #a03a5d;
+
+	/* ==========================================
+	 * PROPIEDADES CUSTOM - Efectos y sombras
+	 * ========================================== */
+	
+	/* Sombra de texto multicapa para efectos dramáticos */
+	--text-shadow-xl:
+		0px 1px 2px rgb(0 0 0 / 0.1), 0px 3px 2px rgb(0 0 0 / 0.1),
+		0px 4px 8px rgb(0 0 0 / 0.1), 0px 6px 12px rgb(0 0 0 / 0.1);
+
+	/* Drop shadow para SVG con múltiples capas */
+	--shadow-svg: drop-shadow(0 2px 1px currentColor)
+		drop-shadow(0 2px 2px currentColor) drop-shadow(0 1px 1px currentColor);
+
+	/* ==========================================
+	 * TIPOGRAFÍA - Referencias a fuentes custom
+	 * ========================================== */
+	--font-terminess: 'Terminess Nerd Font', monospace;
+	--font-bigblueterm: 'BigBlueTerm437 Nerd Font Mono', monospace;
+}

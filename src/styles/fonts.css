@@ -1,0 +1,19 @@
+/**
+ * fonts.css
+ * Definición de fuentes personalizadas para el proyecto
+ * Utiliza CDN para optimización de rendimiento con font-display: swap
+ */
+
+@font-face {
+	font-family: 'Terminess Nerd Font';
+	src: url('https://cdn.jsdelivr.net/gh/bluware-dev/blu-cdn@main/fonts/TerminessNerdFontMono-Regular.ttf')
+		format('truetype');
+	font-display: swap; /* Optimización para evitar FOUT */
+}
+
+@font-face {
+	font-family: 'BigBlueTerm437 Nerd Font Mono';
+	src: url('https://cdn.jsdelivr.net/gh/bluware-dev/blu-cdn@main/fonts/BigBlueTerm437NerdFontMono-Regular.ttf')
+		format('truetype');
+	font-display: swap; /* Optimización para evitar FOUT */
+}
