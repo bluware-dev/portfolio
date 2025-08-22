@@ -1,0 +1,90 @@
+/**
+ * animations.css
+ * Definición de keyframes y utilidades de animación
+ * Optimizado para performance con will-change y transform-style
+ */
+
+@layer utilities {
+	/* ==========================================
+	 * KEYFRAMES - Definición de animaciones
+	 * ========================================== */
+
+	/**
+	 * Animación de rotación 90° con fade → Msj Mobile: "...rotá tu dispositivo a vertical..."
+	 * Ciclo: fade-in + rotate → hold → fade-out
+	 */
+	@keyframes rotate-90 {
+		0% {
+			opacity: 0%;
+			transform: rotate(0deg);
+			transform: rotate(90deg);
+		}
+		30% {
+			opacity: 100%;
+			transform: rotate(90deg);
+		}
+		40% {
+			opacity: 100%;
+		}
+		50% {
+			opacity: 100%;
+			transform: rotate(0deg);
+		}
+		60% {
+			opacity: 100%;
+		}
+		80% {
+			opacity: 0%;
+		}
+		100% {
+			opacity: 0%;
+		}
+	}
+
+	/* ==========================================
+	 * CLASES DE ANIMACIÓN - Utilidades aplicables
+	 * ========================================== */
+
+	/**
+	 * Aplicador de animación rotate-90
+	 * 4s de duración, easing suave, infinita
+	 */
+	.animate-rotate-90 {
+		transform: rotate(90);
+		animation: rotate-90 4s ease infinite;
+	}
+
+	/* ==========================================
+	 * SISTEMA DE ROTACIÓN 3D - Mobile-first responsive
+	 * ========================================== */
+
+	/**
+	 * Estado inicial rotatable - Mobile first approach
+	 * Configuración base para elementos con rotación 3D
+	 */
+	.rotatable {
+		transform-style: preserve-3d; /* Mantiene contexto 3D para children */
+		backface-visibility: hidden; /* Oculta cara posterior, optimiza render */
+		will-change: transform; /* Hint al navegador para optimización GPU */
+		transform-origin: center; /* Punto de rotación centralizado */
+		transform: rotateX(90deg); /* Estado inicial mobile */
+	}
+
+	/**
+	 * Desktop overrides - breakpoint sm+
+	 * Ajuste de rotación para pantallas grandes
+	 */
+	@media (min-width: theme(screens.sm)) {
+		.rotatable {
+			transform: rotateX(-810deg); /* Rotación extendida para desktop */
+		}
+	}
+
+	/**
+	 * Estado final de rotación
+	 * !important necesario para override de estados dinámicos
+	 */
+	.rotatable-end {
+		transform: rotateX(0deg) !important;
+	}
+}
