@@ -9,6 +9,7 @@ import ResponsiveWrapper from '@/components/templates/ResponsiveWrapper';
 import AnimatedOutlet from '@/components/templates/AnimatedOutlet';
 
 import useResponsiveScale from '@/hooks/useResponsiveScale';
+import Overlay from '../atoms/Overlay';
 
 /**
  * Layout simplificado con overlay de entrada y animado usando sólo Tailwind.
@@ -51,14 +52,7 @@ export default function LayoutPage({ isReady }) {
 			/>
 
 			{/* Overlay de entrada con delay y fade automático */}
-			<div
-				style={{ willChange: 'transform, opacity' }}
-				className={`pointer-events-none fixed inset-0 -z-5 backdrop-blur-[2px] delay-[250ms] duration-750 ${
-					isReady
-						? 'backdrop-brightness-80 sm:backdrop-blur-xs'
-						: 'backdrop-brightness-50 sm:backdrop-blur-xl'
-				}`}
-			/>
+			<Overlay isReady={isReady} />
 
 			{/* Contenido dinámico */}
 			<main>
