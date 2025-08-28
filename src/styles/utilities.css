@@ -31,17 +31,38 @@
 	}
 
 	/* ==========================================
-	 * ESPACIADO RESPONSIVE - Sistema clamp()
-	 * ========================================== */
+ 	* ESPACIADO RESPONSIVE - Sistema clamp()
+ 	* ========================================== */
 
 	/**
-	 * Padding-top responsivo post-navbar
-	 * clamp(min, preferred, max) para escalado fluido
-	 * Usado en: BluwareIntro y componentes principales
-	 */
+ 	* Padding-top responsivo post-navbar
+ 	* Regla: siempre entre ~10% y ~20% de la altura de pantalla
+ 	* Ajusta según altura: bajo => menos, alto => más.
+ 	*/
 	.responsive-pt {
-		padding-top: clamp(10dvh, 18dvh, 28dvh);
-		transition: padding-top 0.3s ease;
+		/* base: entre 10% y 20%, fluido */
+		padding-top: clamp(10vh, 18vh, 20vh);
+	}
+
+	/* Ajustes progresivos: más altura, más respiro */
+	@media (min-height: 800px) {
+		.responsive-pt {
+			padding-top: clamp(12vh, 16vh, 20vh);
+		}
+	}
+
+	/* Pantallas grandes/anchas: controlamos para que no se dispare */
+	@media (min-height: 1080px), (min-width: 1440px) {
+		.responsive-pt {
+			padding-top: clamp(10vh, 12vh, 15vh);
+		}
+	}
+
+	/* Mobile estricto: mantener el rango, no achicar */
+	@media (max-width: 768px) and (max-height: 1024px) {
+		.responsive-pt {
+			padding-top: clamp(10vh, 14vh, 20vh);
+		}
 	}
 
 	/**
