@@ -14,6 +14,12 @@ html {
 	color: var(--color-lg-1); /* Color de texto por defecto */
 }
 
+/* Transiciones suaves entre paginas (navigateWithViewTransition) */
+::view-transition-old(root),
+::view-transition-new(root) {
+	animation-duration: 350ms;
+}
+
 /* ==========================================
  * SCROLLBAR CUSTOMIZATION - WebKit browsers
  * Reset completo para UI limpia
