@@ -24,11 +24,12 @@ portfolio/
 │   │   ├── molecules/     # Combinaciones de atoms
 │   │   ├── organisms/     # Secciones complejas de UI
 │   │   └── templates/     # Layouts y wrappers de página
-│   ├── pages/             # Componentes de página (routing)
-│   ├── hooks/             # Custom hooks reutilizables
 │   ├── context/           # React Context providers
-│   ├── lib/               # Utilidades y helpers
 │   ├── data/              # Configuraciones y datos estáticos
+│   ├── examples/          # Ejemplos de uso miscelaneos (sandbox, no tests)
+│   ├── hooks/             # Custom hooks reutilizables
+│   ├── lib/               # Utilidades y helpers
+│   ├── pages/             # Componentes de página (routing)
 │   └── styles/            # CSS global y variables
 ├── public/                # Assets estáticos (imágenes, logos)
 └── ...                    # Configuración de herramientas
