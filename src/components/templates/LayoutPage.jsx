@@ -23,7 +23,9 @@ export default function LayoutPage({ isReady }) {
 		return {
 			transition: `transform 1000ms cubic-bezier(0.4, 0, 0.2, 1) ${delay}`,
 		};
-	}, [pathname, isReady]);
+		// Ignorar warning de lint: queremos calcular pathStyle solo una vez al montar,
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
 	const scale = useResponsiveScale();
 	useEffect(() => {
@@ -40,33 +42,20 @@ export default function LayoutPage({ isReady }) {
 				<div className="h-100 w-full bg-gradient-to-b from-[#1D2021] to-20%" />
 			</Ghost>
 
-			{/* Navbar */}
-			<header
-				style={{
-					transform: `scale(${scale})`,
-					transformOrigin: 'top',
-					willChange: 'transform',
-				}}
-				className="fixed z-30 w-full overflow-hidden"
-			>
-				<div
-					className={`rotatable ${isReady ? 'rotatable-end' : ''}`}
-					style={pathStyle}
-				>
-					<Navbar
-						barClassName="p-1.5"
-						isReady={isReady}
-						pathname={pathname}
-					/>
-				</div>
-			</header>
+			<Navbar
+				pathname={pathname}
+				pathStyle={pathStyle}
+				scale={scale}
+				isReady={isReady}
+				className="rounded-b-lg p-1.5 md:rounded-lg"
+			/>
 
 			{/* Overlay de entrada con delay y fade automático */}
 			<div
 				style={{ willChange: 'transform, opacity' }}
 				className={`pointer-events-none fixed inset-0 -z-5 backdrop-blur-[2px] delay-[250ms] duration-750 ${
 					isReady
-						? 'backdrop-brightness-75 sm:backdrop-blur-xs'
+						? 'backdrop-brightness-80 sm:backdrop-blur-xs'
 						: 'backdrop-brightness-50 sm:backdrop-blur-xl'
 				}`}
 			/>
@@ -78,23 +67,12 @@ export default function LayoutPage({ isReady }) {
 				</ResponsiveWrapper>
 			</main>
 
-			{/* Footer */}
-			<footer
-				style={{
-					transform: `scale(${scale})`,
-					transformOrigin: 'bottom',
-					willChange: 'transform',
-				}}
-				className="fixed bottom-0 z-30 w-full"
-			>
-				<div
-					className={`rotatable ${isReady ? 'rotatable-end' : ''}`}
-					style={pathStyle}
-				>
-					{/* footer content*/}
-					<Footer className="not-sm:h-8" isReady={isReady} />
-				</div>
-			</footer>
+			<Footer
+				pathStyle={pathStyle}
+				scale={scale}
+				isReady={isReady}
+				className="rounded-t-lg md:rounded-lg"
+			/>
 		</>
 	);
 }
