@@ -22,7 +22,7 @@ export default function LayoutPage({ isReady }) {
 	const pathname = useLocation().pathname;
 
 	const pathStyle = useMemo(() => {
-		const delay = pathname === '/' && isReady ? '1500ms' : '0ms';
+		const delay = pathname === '/' ? '1500ms' : '0ms';
 		return {
 			transition: `transform 1000ms cubic-bezier(0.4, 0, 0.2, 1) ${delay}`,
 		};
@@ -50,7 +50,7 @@ export default function LayoutPage({ isReady }) {
 				pathStyle={pathStyle}
 				scale={scale}
 				isReady={isReady}
-				className="rounded-b-lg p-1.5 md:rounded-lg"
+				className="rounded-b-lg px-2 py-1.5 md:rounded-lg"
 			/>
 
 			{/* Overlay de entrada con delay y fade automático */}
@@ -64,10 +64,11 @@ export default function LayoutPage({ isReady }) {
 			</main>
 
 			<Footer
+				pathname={pathname}
 				pathStyle={pathStyle}
 				scale={scale}
 				isReady={isReady}
-				className="rounded-t-lg md:rounded-lg"
+				className="rounded-t-lg px-1.5 md:rounded-lg"
 			/>
 		</>
 	);
