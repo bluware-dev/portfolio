@@ -1,8 +1,8 @@
 import useDelivery from '@/hooks/useDelivery';
-import About from '@/components/organisms/About';
-
 import useFakedFirstRender from '@/hooks/useFakeFirstRender';
 import useIsReady from '@/hooks/useIsReady';
+
+import About from '@/components/organisms/About';
 
 const ORDERS = [
 	{

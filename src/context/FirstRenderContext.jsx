@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+
 import { FirstRenderContext } from './firstRender.js';
 
 export const FirstRenderProvider = ({ children }) => {

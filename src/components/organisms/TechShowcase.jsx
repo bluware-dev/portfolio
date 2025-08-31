@@ -1,14 +1,15 @@
 import { memo, useRef } from 'react';
+
+import useFakedFirstRender from '@/hooks/useFakeFirstRender';
+import useIsReady from '@/hooks/useIsReady';
+
+import TechCard from '@/components/molecules/TechCard';
 import {
+	conditionalIcons,
+	hobbyIcons,
 	langIcons,
 	techIcons,
-	hobbyIcons,
-	conditionalIcons,
 } from '@/data/techStack';
-import TechCard from '@/components/molecules/TechCard';
-
-import useIsReady from '@/hooks/useIsReady';
-import useFakedFirstRender from '@/hooks/useFakeFirstRender';
 
 const SECTIONS = [
 	{

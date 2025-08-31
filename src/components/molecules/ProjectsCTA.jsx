@@ -1,11 +1,10 @@
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import Button from '@/components/atoms/Button';
-
-import useIsReady from '@/hooks/useIsReady';
 import useFakedFirstRender from '@/hooks/useFakeFirstRender';
+import useIsReady from '@/hooks/useIsReady';
 
+import Button from '@/components/atoms/Button';
 import { navigateWithViewTransition } from '@/lib/navigateWithViewTransition';
 
 const BASE_CLASSES =

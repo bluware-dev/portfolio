@@ -1,15 +1,17 @@
 import { useEffect, useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 
-import Ghost from '@/components/atoms/Ghost';
-import Background from '@/components/atoms/Background';
-import Navbar from '@/components/organisms/Navbar';
-import Footer from '@/components/organisms/Footer';
-import ResponsiveWrapper from '@/components/templates/ResponsiveWrapper';
 import AnimatedOutlet from '@/components/templates/AnimatedOutlet';
+import ResponsiveWrapper from '@/components/templates/ResponsiveWrapper';
 
 import useResponsiveScale from '@/hooks/useResponsiveScale';
+
 import Overlay from '../atoms/Overlay';
+
+import Background from '@/components/atoms/Background';
+import Ghost from '@/components/atoms/Ghost';
+import Footer from '@/components/organisms/Footer';
+import Navbar from '@/components/organisms/Navbar';
 
 /**
  * Layout simplificado con overlay de entrada y animado usando sólo Tailwind.

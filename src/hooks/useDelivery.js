@@ -1,6 +1,7 @@
-import { useState, useEffect, useRef, useMemo } from 'react';
-import useIsReady from './useIsReady';
+import { useEffect, useMemo, useRef, useState } from 'react';
+
 import useFakedFirstRender from './useFakeFirstRender';
+import useIsReady from './useIsReady';
 
 /**
  * Hook para delivery incremental de datos con timeouts controlados.
