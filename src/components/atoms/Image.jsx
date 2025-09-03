@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 /**
  * Componente de imagen con soporte para fallback (clase de ícono).
@@ -14,18 +14,16 @@ export default function Image({
 	src,
 	alt,
 	className = '',
-	fallback = 'nf-dev-react',
+	fallback = 'nf-dev-react text-accent-red-dark flex scale-150 items-center justify-center text-5xl',
 }) {
 	const [error, setError] = useState(false);
 
+	useEffect(() => {
+		setError(false);
+	}, [src]);
+
 	if (error) {
-		return (
-			<div
-				className={`${fallback} text-accent-red-dark scale-150 text-5xl`}
-				role="img"
-				aria-label={alt}
-			/>
-		);
+		return <div className={`${fallback} `} role="img" aria-label={alt} />;
 	}
 
 	return (
@@ -33,13 +31,7 @@ export default function Image({
 			src={src}
 			alt={alt}
 			className={className}
-			loading="lazy"
-			onError={() => {
-				console.error(
-					`[Image] Fallo al cargar "${src}". Usando fallback: "${fallback}"`
-				);
-				setError(true);
-			}}
+			onError={() => setError(true)}
 		/>
 	);
 }

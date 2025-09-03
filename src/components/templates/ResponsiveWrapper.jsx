@@ -51,7 +51,8 @@ export default function ResponsiveWrapper({ children }) {
 					(w < 380 && h <= 540) ||
 					(w > 1024 && h <= 280) ||
 					(w > 1024 && h <= 440) ||
-					(w > 1366 && h <= 460)
+					(w > 1366 && h <= 460) ||
+					(w > 1920 && h <= 768)
 			);
 
 			const ratioW = clamp(w / BASE_WIDTH);

@@ -24,11 +24,11 @@ export default function App() {
 						<Route index element={<HomePage />} />
 						<Route
 							path="/projects"
-							element={<ProjectsPage isReady={isReady} />}
+							element={isReady && <ProjectsPage />}
 						/>
 						<Route
 							path="/contact"
-							element={<ContactPage isReady={isReady} />}
+							element={isReady && <ContactPage />}
 						/>
 					</Route>
 				</Routes>
