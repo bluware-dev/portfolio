@@ -6,7 +6,7 @@ const ORDERS = [
 	{
 		key: 'intro',
 		value: true,
-		delay: 250,
+		delay: 150,
 	},
 ];
 
@@ -25,7 +25,7 @@ export default function ProjectsPage() {
 		>
 			<div className="container mx-auto px-4 py-8">
 				<header className="mb-4 text-center">
-					<h1 className="text-lg-1 text-shadow-lg text-shadow-accent-blue-dark mb-1 text-4xl font-bigblueterm">
+					<h1 className="text-lg-2 text-shadow-accent-blue-dark font-bigblueterm mb-1 text-4xl text-shadow-lg">
 						Mis Proyectos
 					</h1>
 					<p className="text-lg-1 font-semibold">

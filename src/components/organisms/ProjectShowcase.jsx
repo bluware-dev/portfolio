@@ -49,7 +49,7 @@ export default function ProjectShowcase({ items = [] }) {
 			</a>
 
 			{/* Descripcion */}
-			<div className="text-shadow-accent-orange-dark text-center text-lg font-semibold text-shadow-lg">
+			<div className="text-shadow-accent-orange-dark text-lg-2 text-center text-lg font-semibold text-shadow-lg">
 				{items[index].description}
 			</div>
 
