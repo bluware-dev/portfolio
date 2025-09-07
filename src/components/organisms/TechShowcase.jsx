@@ -37,6 +37,22 @@ const SECTIONS = [
 
 const WILL_CHANGE_TRANSFORM = { willChange: 'transform' };
 
+/**
+ * TechSection
+ *
+ * Sección de íconos tecnológicos (lenguajes, herramientas, hobbies) animada.
+ * Memoizada para evitar renders innecesarios. Cada ítem se renderiza con `TechCard`.
+ *
+ * @component
+ * @param {Object} props
+ * @param {Object} props.section - Datos de la sección.
+ * @param {string} props.section.id - ID único de la sección.
+ * @param {string} props.section.title - Título de la sección.
+ * @param {Array<Object>} props.section.icons - Array de íconos a renderizar.
+ * @param {string} props.timingClass - Clase CSS de timing para animaciones.
+ * @param {boolean} props.isReady - Flag que indica si la animación debe mostrarse lista.
+ * @returns {JSX.Element} Sección de íconos animada.
+ */
 const TechSection = memo(function TechSection({
 	section,
 	timingClass,
@@ -84,6 +100,14 @@ const TechSection = memo(function TechSection({
 	);
 });
 
+/**
+ * TechShowcase
+ *
+ * Secciones de íconos tecnológicos (lenguajes, herramientas, hobbies).
+ *
+ * @component
+ * @returns {JSX.Element}
+ */
 export default function TechShowcase() {
 	const isReady = useIsReady();
 	const isFirstRender = useFakedFirstRender(isReady);

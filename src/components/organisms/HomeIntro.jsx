@@ -12,6 +12,14 @@ const ORDERS = [
 	},
 ];
 
+/**
+ * HomeIntro
+ *
+ * Intro animado de la home (usa hooks locales).
+ *
+ * @component
+ * @returns {JSX.Element}
+ */
 export default function HomeIntro() {
 	const isReady = useIsReady();
 	const isFirstRender = useFakedFirstRender(isReady);

@@ -4,14 +4,19 @@ import LayoutPage from '@/components/templates/LayoutPage';
 
 import useIsReady from '@/hooks/useIsReady';
 
-import { FirstRenderProvider } from '@/context/FirstRenderContext';
+import { FirstRenderProvider } from '@/context/FirstRenderProvider';
 
 import ContactPage from '@/pages/ContactPage';
 import HomePage from '@/pages/HomePage';
 import ProjectsPage from '@/pages/ProjectsPage';
 
 /**
- * Enrutado basico de paginas en base a LayoutPage
+ * App
+ *
+ * Punto de entrada que monta el router y el layout principal.
+ *
+ * @component
+ * @returns {JSX.Element}
  */
 export default function App() {
 	const isReady = useIsReady();

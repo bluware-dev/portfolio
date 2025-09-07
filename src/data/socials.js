@@ -1,3 +1,9 @@
+/**
+ * Exporta la lista de enlaces a redes sociales usados en el proyecto.
+ * @property {string} platform - Nombre de la plataforma (ej. "GitHub").
+ * @property {string} url
+ * @property {string} icon - Clase CSS o icon identifier.
+ */
 export const SOCIALS = [
 	{
 		platform: 'GitHub',

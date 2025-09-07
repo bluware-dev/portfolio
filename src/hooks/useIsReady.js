@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 
 /**
- * Espera a que carguen fuentes + evento load de la ventana.
- * Loguea error si fonts fallan, arranca igual.
- * @returns {boolean} - true cuando todo está listo.
+ * useIsReady
+ *
+ * Espera a que `document.fonts.ready` y `window.load` se completen; marca true aunque fonts fallen.
+ *
+ * @returns {boolean} true cuando fonts + window.load finalizaron.
  */
 export default function useIsReady() {
 	const [ready, setReady] = useState(false);

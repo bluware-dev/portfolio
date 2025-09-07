@@ -4,6 +4,14 @@ import ProjectNav from '@/components/molecules/ProjectNav';
 import ProjectShowcase from '@/components/organisms/ProjectShowcase';
 import { projects } from '@/data/projects';
 
+/**
+ * ProjectsCategories
+ *
+ * Construye el nav de categorías y renderiza el showcase de la categoría activa.
+ *
+ * @component
+ * @returns {JSX.Element}
+ */
 export default function ProjectsCategories() {
 	const categories = Object.entries(projects);
 

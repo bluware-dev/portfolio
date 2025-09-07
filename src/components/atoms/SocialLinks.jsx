@@ -1,12 +1,12 @@
 /**
  * SocialLinks
  *
- * Componente atómico que renderiza enlaces a redes sociales con íconos.
+ * Lista de enlaces a redes con íconos (render inline).
  *
- * @param {Object} props
- * @param {{ platform: string, url: string, icon: string }[]} props.socials - Array de redes con plataforma, URL e ícono CSS.
- * @param {string} [props.className] - Clases CSS aplicadas a cada enlace.
- * @returns {JSX.Element[]} Lista de enlaces de redes sociales.
+ * @component
+ * @param {{ platform: string, url: string, icon: string }[]} socials
+ * @param {string} [className]
+ * @returns {JSX.Element[]}
  */
 export default function SocialLinks({ socials, className }) {
 	return (

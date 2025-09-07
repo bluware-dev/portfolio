@@ -1,6 +1,13 @@
 import React from 'react';
 import { useLocation, useOutlet } from 'react-router-dom';
 
+/**
+ * AnimatedOutlet
+ *
+ * Clona el outlet añadiendo key basada en la ruta para forzar remount y facilitar view transitions.
+ *
+ * @returns {JSX.Element|null}
+ */
 export default function AnimatedOutlet() {
 	const location = useLocation();
 	const element = useOutlet();

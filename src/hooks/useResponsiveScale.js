@@ -1,5 +1,12 @@
 import { useLayoutEffect, useState } from 'react';
 
+/**
+ * useResponsiveScale
+ *
+ * Calcula un factor de escala responsivo (landscape-aware).
+ *
+ * @returns {number}
+ */
 export default function useResponsiveScale() {
 	const [scale, setScale] = useState(1);
 

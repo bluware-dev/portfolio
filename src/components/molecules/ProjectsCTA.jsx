@@ -10,6 +10,14 @@ import { navigateWithViewTransition } from '@/lib/navigateWithViewTransition';
 const BASE_CLASSES =
 	'border-accent-blue-bold mx-auto flex w-[70%] rotate-x-0 shadow-sm transform-3d justify-center rounded-md border-2 px-6 py-3 text-[1.5rem] text-[#B3D4FF] transition whitespace-nowrap';
 
+/**
+ * ProjectsCTA
+ *
+ * Botón CTA animado para abrir la vista de proyectos (mobile).
+ *
+ * @component
+ * @returns {JSX.Element}
+ */
 export default function ProjectsCTA() {
 	const isReady = useIsReady();
 	const isFirstRender = useFakedFirstRender(isReady);

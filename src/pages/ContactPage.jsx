@@ -12,6 +12,17 @@ const LINK_BASE =
 	'inline-flex items-center not-sm:text-4xl text-5xl md:text-6xl px-1 hover:scale-110 duration-150 ease-in-out';
 const BUTTON_BASE = 'h-fit not-sm:text-sm not-sm:px-2 not-sm:py-1 px-4 py-1.5';
 
+/**
+ * createMailto
+ *
+ * Construye la URL mailto con subject y body codificados.
+ *
+ * @param {Object} param
+ * @param {string} param.name
+ * @param {string} param.email
+ * @param {string} param.message
+ * @returns {string} mailto URL
+ */
 const createMailto = ({ name, email, message }) => {
 	const subject = encodeURIComponent(`Contacto desde portfolio: ${name}`);
 	const body = encodeURIComponent(
@@ -23,12 +34,10 @@ const createMailto = ({ name, email, message }) => {
 /**
  * ContactPage
  *
- * Página de contacto del portfolio. Permite:
- * - Enviar un email vía mailto.
- * - Visualizar enlaces a redes sociales.
- * - Limpiar el formulario.
+ * Página de contacto con formulario y enlaces sociales.
  *
- * @returns {JSX.Element} Página de contacto.
+ * @component
+ * @returns {JSX.Element}
  */
 export default function ContactPage() {
 	const delivery = useDelivery(ORDERS);
@@ -63,7 +72,7 @@ export default function ContactPage() {
 		<main
 			className={`responsive-pt mt-8 min-h-screen transform transition duration-500 sm:scale-100 md:scale-110 ${delivery['intro'] ? 'opacity-100' : 'opacity-0'}`}
 		>
-			<div className="bg-dg-1/80 container mx-auto max-w-2xl rounded border p-4 drop-shadow-2xl">
+			<div className="bg-dg-1/80 container mx-auto max-w-2xl rounded border p-4 pb-1.5 drop-shadow-2xl">
 				<header className="mb-2 text-center">
 					<h1 className="text-lg-2 text-shadow-accent-red-dark font-bigblueterm text-4xl text-shadow-lg">
 						Contacto

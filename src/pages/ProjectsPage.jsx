@@ -11,10 +11,12 @@ const ORDERS = [
 ];
 
 /**
- * Componente de página para mostrar proyectos organizados por categorías
+ * ProjectsPage
+ *
+ * Página que muestra proyectos agrupados por categoría.
  *
  * @component
- * @returns {JSX.Element} Layout de página con showcase de proyectos
+ * @returns {JSX.Element}
  */
 export default function ProjectsPage() {
 	const delivery = useDelivery(ORDERS);

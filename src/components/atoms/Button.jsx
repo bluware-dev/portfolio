@@ -1,15 +1,15 @@
 /**
- * Botón reutilizable con estilo por defecto y soporte para override de clases.
+ * Button
+ *
+ * Botón reutilizable y accesible.
  *
  * @component
- * @param {Object} props - Props del componente.
- * @param {() => void} props.onClick - Función ejecutada al hacer click.
- * @param {React.ReactNode} props.children - Contenido del botón.
- * @param {boolean} [props.disabled=false] - Si el botón está deshabilitado.
- * @param {'button'|'submit'|'reset'} [props.type='button'] - Tipo de botón.
- * @param {string} [props.className=''] - Clases adicionales para override.
- * @returns {JSX.Element} Elemento botón estilizado.
- *
+ * @param {Function} [onClick] - Handler de click.
+ * @param {React.ReactNode} children - Contenido del botón.
+ * @param {boolean} [disabled=false]
+ * @param {'button'|'submit'|'reset'} [type='button']
+ * @param {string} [className]
+ * @returns {JSX.Element}
  */
 export default function Button({
 	onClick,

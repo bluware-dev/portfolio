@@ -14,9 +14,13 @@ import Footer from '@/components/organisms/Footer';
 import Navbar from '@/components/organisms/Navbar';
 
 /**
- * Layout simplificado con overlay de entrada y animado usando sólo Tailwind.
- * @param {Object} props
- * @param {boolean} props.isReady - `true` si fuentes + ventana están cargadas.
+ * LayoutPage
+ *
+ * Layout principal que orquesta overlay, navbar, footer y contenido.
+ *
+ * @component
+ * @param {boolean} isReady - Flag: fuentes + window.load completado.
+ * @returns {JSX.Element}
  */
 export default function LayoutPage({ isReady }) {
 	const pathname = useLocation().pathname;

@@ -1,7 +1,11 @@
 /**
- * @param {Object} props
- * @param {boolean} props.isReady - `true` si fuentes + ventana están cargadas.
- * @param {React.RefObject<boolean>} props.isFirstRender -  Ref que indica si es el primer render lógico.
+ * About
+ *
+ * Sección "About" usada en HomeIntro.
+ *
+ * @component
+ * @param {boolean} isReady - Flag: fuentes + window.load completado.
+ * @param {React.RefObject<boolean>} isFirstRender - Ref que indica primer render lógico.
  * @returns {JSX.Element}
  */
 export default function About({ isReady, isFirstRender }) {

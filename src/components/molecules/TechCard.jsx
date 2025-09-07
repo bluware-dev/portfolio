@@ -7,18 +7,19 @@ const BASE_CLASSES =
 const IMAGE_CLASSES = 'mx-auto max-w-[85%] duration-500';
 
 /**
- * Componente molecular que representa una tarjeta de tecnología con icono, color y animación opcional.
+ * TechCard
+ *
+ * Tarjeta de tecnología con ícono, color y animación opcional.
  *
  * @component
- * @param {Object} props - Props del componente.
  * @param {string} props.name - Nombre de la tecnología.
- * @param {string} props.icon - URL o path del icono de la tecnología.
- * @param {string} props.color - Color principal para la tarjeta.
- * @param {'font'|'image'} props.type - Tipo de icono (fuente o imagen).
- * @param {string} [props.iconClassName] - Clases opcionales para el icono.
- * @param {string} [props.animateIconClassName] - Clases opcionales para animación del icono.
- * @param {boolean} [props.isReady] - Estado de carga para sombras dinámicas.
- * @returns {JSX.Element} Tarjeta de tecnología estilizada y animable.
+ * @param {string} props.icon - Path o clase del ícono.
+ * @param {string} props.color - Clase de color principal.
+ * @param {'font'|'image'} props.type - Tipo de ícono.
+ * @param {string} [props.iconClassName] - Clases extra para ícono.
+ * @param {string} [props.animateIconClassName] - Clases extra para animación.
+ * @param {boolean} [props.isReady] - Controla sombras dinámicas.
+ * @returns {JSX.Element}
  */
 function TechCard({
 	name,
@@ -95,4 +96,9 @@ function TechCard({
 	);
 }
 
+/**
+ * MemoizedTechCard
+ *
+ * Memoización de `TechCard` para evitar renders innecesarios.
+ */
 export default memo(TechCard);

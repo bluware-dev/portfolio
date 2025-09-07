@@ -19,6 +19,17 @@ const ORDERS = [
 	},
 ];
 
+/**
+ * DeliveryEgg (ComponentEgg)
+ *
+ * Demo / ejemplo de uso del hook `useDelivery`. No es un test,
+ * es un "Egg Case" que muestra cómo consumir `delivery['key']` una vez entregado.
+ *
+ * ORDERS: Array<{ key: string, value: any, delay?: number }>
+ *
+ * @component
+ * @returns {JSX.Element}
+ */
 export default function DeliveryEgg() {
 	const delivery = useDelivery(ORDERS);
 

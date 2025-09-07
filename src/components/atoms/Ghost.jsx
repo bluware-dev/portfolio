@@ -1,13 +1,15 @@
 /**
- * Componente fantasma para superponer contenido detrás del layout.
+ * Ghost
+ *
+ * Contenedor para contenido posicionado detrás del layout (z-index negativo).
  *
  * @component
- * @param {ReactNode} children - Contenido superpuesto.
- * @param {string} [layer=-1] - Clase para style z-index (e.g. {zIndex: -1}, {zIndex: -10}, {zIndex: -50}...).
- * @param {string} [className] - Clases adicionales.
+ * @param {string} [layer] - Clase/valor para controlar z-index.
+ * @param {React.ReactNode} children
+ * @param {string} [className]
  * @returns {JSX.Element}
  */
-export default function Ghost({ children, layer = -1, className = '' }) {
+export default function Ghost({ layer = -10, children, className }) {
 	return (
 		<div
 			className={`pointer-events-none absolute overflow-hidden ${className}`}

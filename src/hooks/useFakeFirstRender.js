@@ -3,15 +3,16 @@ import { useEffect, useRef } from 'react';
 import { useFirstRender } from '@/context/firstRender';
 
 /**
- * Devuelve un ref booleana que indica si es el primer render lógico tras `isReady`.
+ * useFakeFirstRender
  *
- * Permite controlar animaciones introductorias sin repetirlas al navegar entre rutas.
+ * Hook que devuelve un ref booleana que indica si es el primer render lógico.
+ * Útil para animaciones introductorias que no deben repetirse al navegar.
  *
- * @param {boolean} isReady - Indica que fuentes y ventana están completamente cargadas.
- * @returns {React.MutableRefObject<boolean>} Ref que persiste si es primer render tras `isReady`.
+ * @param {boolean} isReady - Flag: fuentes + window.load completado.
+ * @returns {React.RefObject<boolean>} Ref que indica si es primer render.
  *
  * @example
- * const isFirstRender = useFakedFirstRender(isReady);
+ * const isFirstRender = useFakeFirstRender(isReady);
  * if (isFirstRender.current) triggerFirstAnimation();
  */
 export default function useFakedFirstRender(isReady) {

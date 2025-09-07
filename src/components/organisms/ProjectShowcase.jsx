@@ -11,6 +11,15 @@ const BUTTON_BASE =
 
 const BUTTON_VERBOSE = `${BUTTON_BASE} transform-none duration-500`;
 
+/**
+ * ProjectShowcase
+ *
+ * Visor/Carousel de proyectos con controles y modo verbose.
+ *
+ * @component
+ * @param {Array<Object>} items - Array de proyectos.
+ * @returns {JSX.Element}
+ */
 export default function ProjectShowcase({ items = [] }) {
 	const {
 		index,

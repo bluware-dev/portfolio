@@ -1,19 +1,21 @@
 import { useEffect, useState } from 'react';
 
 /**
- * Componente de imagen con soporte para fallback (clase de ícono).
+ * Image
+ *
+ * Imagen con fallback (clase de icono) y accesibilidad básica.
  *
  * @component
- * @param {string} src - URL de la imagen principal.
+ * @param {string} src - Fuente de la imagen.
  * @param {string} alt - Texto alternativo.
- * @param {string} [className] - Clases opcionales para la imagen.
- * @param {string} [fallback='nf-dev-react text-color-pearl'] - Clase de fallback (ej. NerdFonts).
- * @returns {JSX.Element} Imagen o fallback.
+ * @param {string} [className]
+ * @param {string} [fallback='nf-dev-react text-color-pearl'] - Clase de fallback.
+ * @returns {JSX.Element}
  */
 export default function Image({
 	src,
 	alt,
-	className = '',
+	className,
 	fallback = 'nf-dev-react text-accent-red-dark flex scale-150 items-center justify-center text-5xl',
 }) {
 	const [error, setError] = useState(false);

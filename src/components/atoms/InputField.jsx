@@ -1,17 +1,17 @@
 /**
  * InputField
  *
- * Componente atómico de input o textarea con label.
+ * Input controlado o textarea con label.
  *
- * @param {Object} props
- * @param {string} props.label - Texto del label que acompaña al input.
- * @param {string} props.name - Nombre del input para manejar el estado.
- * @param {string|number} props.value - Valor controlado del input.
- * @param {(e: React.ChangeEvent<HTMLInputElement|HTMLTextAreaElement>) => void} props.onChange - Función para actualizar el estado.
- * @param {string} [props.type='text'] - Tipo de input (solo aplica si no es textarea).
- * @param {number} [props.rows] - Número de filas si se renderiza un textarea.
- * @param {string} [props.className] - Clases adicionales para personalizar el input.
- * @returns {JSX.Element} Input o Textarea con label.
+ * @component
+ * @param {string} name
+ * @param {string} label
+ * @param {string|number} value
+ * @param {Function} onChange - (e) => void
+ * @param {string} [type='text']
+ * @param {number} [rows]
+ * @param {string} [className]
+ * @returns {JSX.Element}
  */
 export default function InputField({
 	label,

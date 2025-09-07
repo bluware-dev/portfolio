@@ -1,7 +1,11 @@
 /**
- * Overlay de introduccion
- * @param {Object} props
- * @param {boolean} props.isReady - `true` si fuentes + ventana están cargadas.
+ * Overlay
+ *
+ * Overlay de entrada que bloquea/oculta hasta que la app esté lista.
+ *
+ * @component
+ * @param {boolean} isReady - Flag: fuentes + window.load completado.
+ * @returns {JSX.Element}
  */
 export default function Overlay({ isReady }) {
 	return (

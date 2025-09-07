@@ -4,9 +4,8 @@ import useFakedFirstRender from './useFakeFirstRender';
 import useIsReady from './useIsReady';
 
 /**
- * Hook para delivery incremental de datos con timeouts controlados.
+ * Hook para delivery incremental de datos con timeouts asincronos controlados.
  *
- * Maneja entregas asíncronas evitando memory leaks y renders redundantes.
  * Una vez completado, se vuelve inerte para optimizar re-renders.
  *
  * @param {Array<{key: string, value: any, delay?: number}>} orders - Órdenes de entrega

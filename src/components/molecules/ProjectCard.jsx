@@ -1,5 +1,20 @@
 import Image from '@/components/atoms/Image';
 
+/**
+ * ProjectCard
+ *
+ * Tarjeta que muestra un proyecto (imagen, título, descripción).
+ *
+ * @component
+ * @param {Object} project
+ * @param {string} project.id
+ * @param {string} project.title
+ * @param {string} [project.description]
+ * @param {string} [project.verbose]
+ * @param {string} [project.url]
+ * @param {string} [project.image]
+ * @returns {JSX.Element}
+ */
 export default function ProjectCard({ project }) {
 	if (!project) return null;
 

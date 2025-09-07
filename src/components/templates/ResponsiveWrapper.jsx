@@ -6,24 +6,11 @@ import Ghost from '@/components/atoms/Ghost';
 /**
  * ResponsiveWrapper
  *
- * Componente de layout responsivo a pantalla completa.
- * - Escala el contenido de la app proporcionalmente al tamaño de la ventana.
- * - Aplica límites mínimos/máximos al escalado para evitar distorsiones.
- * - Muestra overlays si el viewport es demasiado angosto o bajo para garantizar usabilidad.
- *
- * Casos especiales:
- * - Si se da el caso horizontal-unresponsive → se muestra un overlay solicitando rotar el dispositivo.
- * - Si se da el caso full-unresponsive → se muestra un overlay de error.
- *
- * Escalado:
- * - Basado en proporciones respecto a un diseño de referencia de 1920x1080.
- * - Bonus dinámico añadido para tamaños incómodos (móviles pequeños / pantallas altas).
- * - El `scale` final es la media de ambos ratios con bonuses acotados (máx: 1).
+ * Wrapper que escala el contenido según el viewport y muestra overlays si el viewport no es usable.
  *
  * @component
- * @param {Object} props
- * @param {React.ReactNode} props.children - Elementos hijos a renderizar escalados.
- * @returns {JSX.Element} Contenedor escalado o pantalla de advertencia según viewport.
+ * @param {React.ReactNode} children - Contenido a escalar.
+ * @returns {JSX.Element}
  */
 export default function ResponsiveWrapper({ children }) {
 	const [isTooShort, setIsTooShort] = useState(false);

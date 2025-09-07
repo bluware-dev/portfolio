@@ -1,3 +1,11 @@
+/**
+ * Data para TechCards.
+ * @param {string} name Nombre de la tecnología.
+ * @param {'font'|'image'} type Tipo de ícono.
+ * @param {string} icon Recurso o clase del ícono.
+ * @param {string} color Color principal.
+ * @param {string} [iconClassName] Clases CSS opcionales.
+ */
 export const langIcons = [
 	{
 		name: 'Python',

@@ -1,4 +1,15 @@
-// https://developer.mozilla.org/en-US/docs/Web/API/Document/startViewTransition
+/**
+ * navigateWithViewTransition
+ *
+ * Envuelve la navegación con startViewTransition si está disponible.
+ *
+ * https://developer.mozilla.org/en-US/docs/Web/API/Document/startViewTransition
+ *
+ * @param {Function} navigate - Función de navegación (react-router).
+ * @param {string} to - Ruta destino.
+ * @param {Object} opts - Opciones de navegación.
+ * @returns {void}
+ */
 export function navigateWithViewTransition(navigate, to, opts) {
 	if (
 		typeof document !== 'undefined' &&

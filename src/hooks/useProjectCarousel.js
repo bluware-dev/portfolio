@@ -1,10 +1,18 @@
 import { useState, useCallback, useEffect } from 'react';
 
+/**
+ * useProjectCarousel
+ *
+ * Hook que maneja la navegación y animaciones de un carrusel de proyectos.
+ *
+ * @param {Array} items - Lista de proyectos a mostrar.
+ * @returns {Object} { index, verbose, verboseAnim, indexAnim, triggerVerbose, triggerIndex }
+ */
 export default function useProjectCarousel(items) {
 	const [index, setIndex] = useState(0);
+	const [indexAnim, setIndexAnim] = useState('');
 	const [verbose, setVerbose] = useState(false);
 	const [verboseAnim, setVerboseAnim] = useState('');
-	const [indexAnim, setIndexAnim] = useState('');
 
 	const triggerVerbose = useCallback(() => {
 		setIndexAnim('');

@@ -5,7 +5,6 @@
  * Cada categoría (atomic, molecular, organism) agrupa proyectos
  * según nivel de complejidad/composición.
  */
-
 export const projects = {
 	atomico: [
 		// Ejemplo de slot vacío

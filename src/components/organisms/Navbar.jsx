@@ -8,16 +8,15 @@ import { navigateWithViewTransition } from '@/lib/navigateWithViewTransition';
 /**
  * Navbar
  *
- * Componente de navegación principal, dependiente de LayoutPage.
- * Recibe props calculadas externamente para animaciones, escala y estilos dinámicos.
+ * Barra de navegación con estados/anims controlados externamente.
  *
- * @param {Object} props
- * @param {string} props.pathname - Ruta actual, usada para resaltar botones activos.
- * @param {Object} props.pathStyle - Estilos dinámicos aplicados al contenedor para animaciones (transform, delays, etc.).
- * @param {number} props.scale - Factor de escala aplicado al Navbar según viewport.
- * @param {boolean} props.isReady - Indica si la app y fuentes están listas; activa animaciones de entrada.
- * @param {string} [props.className] - Clases CSS opcionales adicionales para el contenedor.
- * @returns {JSX.Element} Navbar renderizado con animaciones y escala responsiva.
+ * @component
+ * @param {string} pathname
+ * @param {Object} pathStyle
+ * @param {number} scale
+ * @param {boolean} isReady - Flag: fuentes + window.load completado.
+ * @param {string} [className]
+ * @returns {JSX.Element}
  */
 export default function Navbar({
 	pathname,
