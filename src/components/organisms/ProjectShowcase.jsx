@@ -7,11 +7,10 @@ import ProjectCard from '@/components/molecules/ProjectCard';
 
 const BUTTON_BASE =
 	'rounded border px-3 py-1 bg-dg-1/80 hover:bg-dg-0/80 ' +
-	'hover:font-semibold active:bg-lg-3 active:text-dg-1 ' +
 	'focus:outline-none focus:ring-2 focus:ring-accent-blue ' +
-	'transition-colors duration-200 select-none';
+	'transition-colors duration-200 select-none text-xl';
 
-const BUTTON_VERBOSE = `${BUTTON_BASE} transform-none duration-500`;
+const BUTTON_VERBOSE = `${BUTTON_BASE} transform-none text-shadow-xl font-semibold`;
 
 /**
  * ScrollIndicator
@@ -56,10 +55,12 @@ function ScrollIndicator({ children }) {
 				{children}
 			</div>
 
-			<div
-				className={`border-accent-blue-bold text-accent-blue bg-dg-0/85 group-hover:text-accent-orange group-hover:border-accent-orange-bold group-hover:text-shadow-accent-blue text-shadow-xl text-shadow-accent-orange-bold absolute -bottom-2 left-1/2 flex h-10 w-10 -translate-x-1/2 animate-bounce items-center justify-center rounded-full border-3 transition duration-250 ${showIndicator ? 'opacity-75' : 'opacity-0'} not-sm:scale-75 sm:scale-90`}
-			>
-				<span className="nf-md-chevron_double_down text-4xl" />
+			<div className="animate-pulse">
+				<div
+					className={`border-accent-blue-bold text-accent-blue bg-dg-0/85 group-hover:text-accent-orange group-hover:border-accent-orange-bold group-hover:text-shadow-accent-blue text-shadow-xl text-shadow-accent-orange-bold absolute -bottom-2 left-1/2 flex h-10 w-10 -translate-x-1/2 animate-bounce items-center justify-center rounded-full border-3 transition duration-300 ${showIndicator ? 'opacity-200' : 'opacity-0'} not-sm:scale-75 sm:scale-90`}
+				>
+					<span className="nf-md-chevron_double_down text-4xl" />
+				</div>
 			</div>
 		</div>
 	);
@@ -87,7 +88,9 @@ export default function ProjectShowcase({ items = [] }) {
 
 	if (!items.length || !items[index]) {
 		return (
-			<p className="text-center">Todavia no se cargaron proyectos...</p>
+			<p className="text-center text-xl font-semibold">
+				Todavia no se cargaron proyectos...
+			</p>
 		);
 	}
 
@@ -118,7 +121,7 @@ export default function ProjectShowcase({ items = [] }) {
 			</a>
 
 			{/* Descripcion */}
-			<div className="text-shadow-accent-orange-dark text-lg-2 text-center text-lg font-semibold text-shadow-lg not-sm:text-xl">
+			<div className="text-shadow-accent-orange-dark text-lg-2 text-center text-xl font-semibold text-shadow-lg">
 				{items[index].description}
 			</div>
 
@@ -126,18 +129,25 @@ export default function ProjectShowcase({ items = [] }) {
 			<div className="mt-2 flex justify-between select-none">
 				<Button
 					onClick={() => triggerIndex('prev')}
-					className={BUTTON_BASE}
+					className={BUTTON_BASE + ' active:bg-lg-3 active:text-dg-1'}
 				>
 					◄
 				</Button>
 
-				<Button onClick={triggerVerbose} className={BUTTON_VERBOSE}>
+				<Button
+					onClick={triggerVerbose}
+					className={`${BUTTON_VERBOSE} duration-200 ${
+						verbose
+							? 'bg-lg-3/80 hover:bg-lg-3/100 text-dg-0 text-shadow-dg-0/25 active:bg-dg-0 active:text-lg-3 border-2 font-semibold'
+							: 'bg-dg-0/50 hover:bg-dg-0/95 text-shadow-lg-3/25 active:bg-lg-3 active:text-dg-1 border'
+					}`}
+				>
 					{!verbose ? 'Ver Más' : 'Ver Menos'}
 				</Button>
 
 				<Button
 					onClick={() => triggerIndex('next')}
-					className={BUTTON_BASE}
+					className={BUTTON_BASE + ' active:bg-lg-3 active:text-dg-1'}
 				>
 					►
 				</Button>

@@ -29,7 +29,7 @@ export default function ProjectsPage() {
 				<h1 className="text-lg-2 text-shadow-accent-blue-dark font-bigblueterm mb-1 text-4xl text-shadow-lg">
 					Mis Proyectos
 				</h1>
-				<p className="text-lg-1 font-semibold not-sm:text-xl">
+				<p className="text-lg-1 text-shadow-dg-0/50 text-shadow-xl text-xl font-semibold">
 					Explora mis proyectos organizados por categorías
 				</p>
 			</header>

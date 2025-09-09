@@ -23,7 +23,7 @@ export default function Button({
 			onClick={onClick}
 			disabled={disabled}
 			type={type}
-			className={`rounded-md text-center transition ${className}`}
+			className={`rounded-md text-center cursor-pointer transition ${className}`}
 		>
 			{children}
 		</button>

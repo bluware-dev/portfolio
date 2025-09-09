@@ -29,12 +29,12 @@ export default function ProjectCard({ project }) {
 						fallback="nf-dev-react text-accent-red-dark text-8xl font-normal flex pt-10 flex scale-200 origin-top items-center justify-center"
 					/>
 				) : (
-					<div className="flex h-full items-center justify-center bg-gray-200">
+					<div className="bg-dg-0/50 flex h-full items-center justify-center rounded-lg text-4xl">
 						No Image
 					</div>
 				)}
 			</div>
-			<h3 className="text-center text-lg font-semibold">
+			<h3 className="text-shadow-xl text-shadow-accent-blue-bold/50 text-center text-xl font-semibold">
 				{project.title}
 			</h3>
 		</div>

@@ -10,7 +10,8 @@ import { SOCIALS } from '@/data/socials';
 const ORDERS = [{ key: 'intro', value: true, delay: 150 }];
 const LINK_BASE =
 	'inline-flex items-center text-5xl md:text-6xl px-1 hover:scale-110 duration-150 ease-in-out';
-const BUTTON_BASE = 'h-fit not-sm:text-lg not-sm:px-2 not-sm:py-1 px-4 py-1.5';
+const BUTTON_BASE =
+	'h-fit not-sm:text-lg not-sm:px-2 not-sm:py-1 px-4 py-1.5 font-semibold';
 
 /**
  * createMailto
@@ -72,12 +73,12 @@ export default function ContactPage() {
 		<div
 			className={`transform transition duration-500 ${delivery['intro'] ? 'opacity-100' : 'opacity-0'}`}
 		>
-			<div className="bg-dg-1/80 container mx-auto max-w-2xl rounded border p-4 pb-1.5 not-sm:pb-3 drop-shadow-2xl">
+			<div className="bg-dg-1/80 container mx-auto max-w-2xl rounded border p-4 pb-1.5 drop-shadow-2xl not-sm:pb-3">
 				<header className="mb-2 text-center">
 					<h1 className="text-lg-2 text-shadow-accent-red-dark font-bigblueterm text-4xl text-shadow-lg">
 						Contacto
 					</h1>
-					<p className="text-lg-2 mt-1 font-semibold text-xl">
+					<p className="text-lg-2 text-shadow-xl text-shadow-dg-0/50 mt-1 text-xl font-semibold">
 						Enviame un email o contactame por mis redes sociales.
 					</p>
 				</header>
@@ -117,17 +118,17 @@ export default function ContactPage() {
 								className={LINK_BASE}
 							/>
 						</div>
-						<div className="flex gap-4 pt-2 not-sm:gap-2">
+						<div className="flex gap-4 pt-2 transition not-sm:gap-2">
 							<Button
 								type="button"
 								onClick={resetForm}
-								className={`${BUTTON_BASE} text-dg-2 bg-accent-red hover:bg-accent-red-bold`}
+								className={`${BUTTON_BASE} text-dg-2 bg-accent-red hover:bg-accent-red-bold hover:text-shadow-xl text-shadow-lg-3/75`}
 							>
 								Limpiar
 							</Button>
 							<Button
 								type="submit"
-								className={`${BUTTON_BASE} text-pearl bg-accent-blue-bold hover:bg-accent-blue-dark`}
+								className={`${BUTTON_BASE} text-pearl bg-accent-blue-bold hover:bg-accent-blue-dark hover:text-shadow-xl text-shadow-dg-0/75`}
 							>
 								Enviar
 							</Button>

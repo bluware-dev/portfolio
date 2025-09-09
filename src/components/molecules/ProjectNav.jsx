@@ -24,10 +24,10 @@ export default function ProjectNav({
 				<Button
 					key={key}
 					onClick={() => onCategoryChange(key)}
-					className={`rounded px-2 py-0.75 ${
+					className={`text-shadow-dg-0/40 text-shadow-xl rounded hover:scale-102 px-2 py-0.75 text-xl font-semibold ${
 						key === activeCat
-							? 'bg-lg-3/80 text-dg-0 border-2 font-semibold'
-							: 'bg-dg-1/80 hover:bg-dg-0/80 border'
+							? 'bg-lg-3/80 hover:bg-lg-3/100 text-dg-0 border-2 font-semibold'
+							: 'bg-dg-0/50 hover:bg-dg-0/95 hover:text-shadow-lg-3/25 border'
 					}`}
 				>
 					{key}

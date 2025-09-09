@@ -32,7 +32,7 @@ export default function Navbar({
 	);
 
 	const btnBase =
-		'border-dg-1 px-1 py-[1px] text-[1rem] duration-[100ms] ease-in hover:scale-105 hover:font-extrabold active:scale-100 sm:scale-100 sm:text-[1.15rem]';
+		'border-dg-1 px-1 py-[1px] text-[1rem] text-shadow-dg-0/30 text-shadow-xl duration-[100ms] ease-in hover:scale-105 hover:font-extrabold active:scale-100 sm:scale-100 sm:text-[1.15rem]';
 
 	const navItems = useMemo(
 		() => [
