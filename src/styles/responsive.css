@@ -1,0 +1,107 @@
+/**
+ * responsive.css
+ * Clases responsivas dedicadas
+ */
+
+@layer utilities {
+	/* ==========================================
+	  * ROOT RESPONSIVE - Base universal para Outlet
+	  * ========================================== */
+	.responsive-root {
+		transform: scale(1);
+		transform-origin: top center;
+	}
+
+	/* Aspect ratios */
+	@media (aspect-ratio: 16/9) {
+		.responsive-root {
+			transform: scale(1);
+		}
+	}
+	@media (aspect-ratio: 16/10) {
+		.responsive-root {
+			transform: scale(0.95);
+		}
+	}
+	@media (aspect-ratio: 3/2) {
+		.responsive-root {
+			transform: scale(0.9);
+		}
+	}
+	@media (aspect-ratio: 4/3) {
+		.responsive-root {
+			transform: scale(0.85);
+		}
+	}
+	@media (aspect-ratio: 21/9) {
+		.responsive-root {
+			transform: scale(0.8);
+		}
+	}
+	@media (aspect-ratio: 32/9) {
+		.responsive-root {
+			transform: scale(0.7);
+		}
+	}
+	@media (max-aspect-ratio: 10/16) {
+		.responsive-root {
+			transform: scale(0.65);
+		}
+	}
+	@media (max-aspect-ratio: 3/4) {
+		.responsive-root {
+			transform: scale(0.7);
+		}
+	}
+	@media (aspect-ratio: 1/1) {
+		.responsive-root {
+			transform: scale(0.75);
+		}
+	}
+
+	/* Heights progresivos */
+	@media (max-height: 1080px) and (min-height: 901px) {
+		.responsive-root {
+			transform: scale(0.95);
+		}
+	}
+	@media (max-height: 900px) and (min-height: 801px) {
+		.responsive-root {
+			transform: scale(0.9);
+		}
+	}
+	@media (max-height: 800px) and (min-height: 701px) {
+		.responsive-root {
+			transform: scale(0.8);
+		}
+	}
+	@media (max-height: 700px) and (min-height: 601px) {
+		.responsive-root {
+			transform: scale(0.7);
+		}
+	}
+	@media (max-height: 600px) and (min-height: 501px) {
+		.responsive-root {
+			transform: scale(0.6);
+		}
+	}
+	@media (max-height: 500px) {
+		.responsive-root {
+			transform: scale(0.5);
+		}
+	}
+
+	/* Narrow width / mobile */
+	@media (max-width: 768px) {
+		.responsive-root {
+			transform: scale(0.75);
+		}
+	}
+
+	/* Extremos combinados */
+	@media (max-width: 768px), (max-height: 600px) {
+		.responsive-root {
+			transform: scale(0.65);
+		}
+	}
+}
