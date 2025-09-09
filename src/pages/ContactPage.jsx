@@ -9,8 +9,8 @@ import { SOCIALS } from '@/data/socials';
 
 const ORDERS = [{ key: 'intro', value: true, delay: 150 }];
 const LINK_BASE =
-	'inline-flex items-center not-sm:text-4xl text-5xl md:text-6xl px-1 hover:scale-110 duration-150 ease-in-out';
-const BUTTON_BASE = 'h-fit not-sm:text-sm not-sm:px-2 not-sm:py-1 px-4 py-1.5';
+	'inline-flex items-center text-5xl md:text-6xl px-1 hover:scale-110 duration-150 ease-in-out';
+const BUTTON_BASE = 'h-fit not-sm:text-lg not-sm:px-2 not-sm:py-1 px-4 py-1.5';
 
 /**
  * createMailto
@@ -69,15 +69,15 @@ export default function ContactPage() {
 	);
 
 	return (
-		<main
-			className={`responsive-pt mt-8 min-h-screen transform transition duration-500 sm:scale-100 md:scale-110 ${delivery['intro'] ? 'opacity-100' : 'opacity-0'}`}
+		<div
+			className={`transform transition duration-500 ${delivery['intro'] ? 'opacity-100' : 'opacity-0'}`}
 		>
-			<div className="bg-dg-1/80 container mx-auto max-w-2xl rounded border p-4 pb-1.5 drop-shadow-2xl">
+			<div className="bg-dg-1/80 container mx-auto max-w-2xl rounded border p-4 pb-1.5 not-sm:pb-3 drop-shadow-2xl">
 				<header className="mb-2 text-center">
 					<h1 className="text-lg-2 text-shadow-accent-red-dark font-bigblueterm text-4xl text-shadow-lg">
 						Contacto
 					</h1>
-					<p className="text-lg-2 mt-1 font-semibold">
+					<p className="text-lg-2 mt-1 font-semibold text-xl">
 						Enviame un email o contactame por mis redes sociales.
 					</p>
 				</header>
@@ -135,6 +135,6 @@ export default function ContactPage() {
 					</div>
 				</form>
 			</div>
-		</main>
+		</div>
 	);
 }

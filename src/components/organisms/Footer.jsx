@@ -1,9 +1,8 @@
-import React, { useMemo, useId, useCallback } from 'react';
+import React, { useId, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import SocialLinks from '../atoms/SocialLinks';
-
 import Bar from '@/components/atoms/Bar';
+import SocialLinks from '@/components/atoms/SocialLinks';
 import { SOCIALS } from '@/data/socials';
 import { navigateWithViewTransition } from '@/lib/navigateWithViewTransition';
 
@@ -18,7 +17,6 @@ const LINK_BASE =
  * @component
  * @param {string} pathname
  * @param {Object} pathStyle
- * @param {number} scale
  * @param {boolean} isReady - Flag: fuentes + window.load completado.
  * @param {string} [className]
  * @returns {JSX.Element}
@@ -26,18 +24,9 @@ const LINK_BASE =
 export default function Footer({
 	pathname,
 	pathStyle,
-	scale,
 	isReady,
 	className = '',
 }) {
-	const transformStyle = useMemo(
-		() => ({
-			transform: `scale(${Number(scale)})`,
-			transformOrigin: 'bottom center',
-			willChange: 'transform',
-		}),
-		[scale]
-	);
 	const navigate = useNavigate();
 
 	const handleNav = useCallback(
@@ -48,7 +37,7 @@ export default function Footer({
 	const uid = useId();
 
 	return (
-		<footer style={transformStyle} className="fixed bottom-0 z-30 w-full">
+		<footer className="fixed bottom-0 z-30 w-full">
 			<div
 				className={`rotatable ${isReady ? 'rotatable-end' : ''}`}
 				style={pathStyle}

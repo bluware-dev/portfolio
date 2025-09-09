@@ -23,9 +23,7 @@ export default function ProjectsCTA() {
 	const isFirstRender = useFakedFirstRender(isReady);
 	const navigate = useNavigate();
 
-	const [trigger, setTrigger] = useState(
-		'responsive-cta responsive-mt bg-dg-0'
-	);
+	const [trigger, setTrigger] = useState('mt-5 bg-dg-0');
 	const [animating, setAnimating] = useState(false);
 	const timeoutRef = useRef(null);
 

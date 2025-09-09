@@ -24,7 +24,7 @@ export default function Bar({
 }) {
 	return (
 		<div
-			className={`bg-dg-1 relative container mx-auto flex flex-nowrap items-center transition-transform sm:min-w-4/5 md:min-w-3/5 ${className}`}
+			className={`bg-dg-1 container mx-auto flex flex-nowrap items-center transition-transform sm:min-w-4/5 md:min-w-3/5 ${className}`}
 		>
 			<div id={idLeft} className="flex flex-1 flex-row justify-start">
 				{left}

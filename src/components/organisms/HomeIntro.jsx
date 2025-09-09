@@ -27,7 +27,7 @@ export default function HomeIntro() {
 	const delivery = useDelivery(ORDERS);
 
 	return (
-		<div className="responsive-pt text-center transition-[padding,margin]">
+		<div className="text-center transition">
 			<div
 				style={{ willChange: 'transform' }}
 				className={`font-bigblueterm ${
@@ -47,7 +47,7 @@ export default function HomeIntro() {
 							: 'not-sm:opacity-0'
 					}`}
 				>
-					<h1 className="scale-unresponsive-title flex justify-center text-6xl transition-transform">
+					<h1 className="flex justify-center text-6xl transition-transform">
 						{/* Glow de fondo */}
 						<span
 							style={{ willChange: 'opacity' }}

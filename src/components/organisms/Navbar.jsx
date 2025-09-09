@@ -13,7 +13,6 @@ import { navigateWithViewTransition } from '@/lib/navigateWithViewTransition';
  * @component
  * @param {string} pathname
  * @param {Object} pathStyle
- * @param {number} scale
  * @param {boolean} isReady - Flag: fuentes + window.load completado.
  * @param {string} [className]
  * @returns {JSX.Element}
@@ -21,19 +20,9 @@ import { navigateWithViewTransition } from '@/lib/navigateWithViewTransition';
 export default function Navbar({
 	pathname,
 	pathStyle,
-	scale,
 	isReady,
 	className = '',
 }) {
-	const transformStyle = useMemo(
-		() => ({
-			transform: `scale(${Number(scale)})`,
-			transformOrigin: 'top center',
-			willChange: 'transform',
-		}),
-		[scale]
-	);
-
 	const navigate = useNavigate();
 	const uid = useId();
 
@@ -85,11 +74,7 @@ export default function Navbar({
 	});
 
 	return (
-		<header
-			style={transformStyle}
-			className="fixed top-0 z-30 w-full"
-			aria-hidden="false"
-		>
+		<header className="relative top-0 z-30 w-full" aria-hidden="false">
 			<div
 				className={`rotatable ${isReady ? 'rotatable-end' : ''}`}
 				style={pathStyle}

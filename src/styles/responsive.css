@@ -104,4 +104,11 @@
 			transform: scale(0.65);
 		}
 	}
+
+	/* Unusuals */
+	@media (max-width: 361px), (max-height: 420px) {
+		.responsive-root {
+			transform: scale(0.5);
+		}
+	}
 }

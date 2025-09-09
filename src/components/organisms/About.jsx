@@ -10,13 +10,13 @@
  */
 export default function About({ isReady, isFirstRender }) {
 	const textMakeup =
-		'text-shadow-sm font-extralight font-bigblueterm text-[.75em]';
+		'text-shadow-sm font-extralight font-bigblueterm text-lg sm:text-lg';
 
 	return (
 		<div>
 			<p
 				style={{ willChange: 'opacity, text-shadow' }}
-				className={`text-lg-1 text-shadow-dg-1 mb-4 inline-block text-center text-lg text-[1.2em] font-bold not-sm:text-[1.1em] sm:mb-6 sm:max-w-[65vw] ${
+				className={`text-lg-1 text-shadow-dg-1 font-dark mb-4 inline-block text-center text-xl not-sm:text-lg sm:mb-6 sm:max-w-[65vw] ${
 					isFirstRender.current
 						? 'delay-[1500ms] duration-1000'
 						: 'delay-[0ms] duration-500'
@@ -26,60 +26,61 @@ export default function About({ isReady, isFirstRender }) {
 						: '-translate-y-5 opacity-0 text-shadow-none'
 				}`}
 			>
-				{' '}
-				Mi nombre es{' '}
+				<span className="text-xl font-bold">Soy </span>
 				<span className={`${textMakeup} text-shadow-accent-blue-dark`}>
-					Elian
+					Elian Jofré
 				</span>
 				<br />
 				<span
-					className={`${textMakeup} text-shadow-accent-orange-bold`}
+					className={`${textMakeup} text-shadow-accent-orange-dark`}
 				>
-					Fullstack Developer
+					Software Developer
 				</span>{' '}
 				·{' '}
 				<span
-					className={`${textMakeup} text-shadow-accent-purple-bold`}
+					className={`${textMakeup} text-shadow-accent-purple-dark`}
 				>
-					Linux Poweruser
-				</span>{' '}
-				·{' '}
-				<span className={`${textMakeup} text-shadow-accent-green-bold`}>
-					Backend Architect
+					Linux & Virtualization
 				</span>{' '}
 				·{' '}
 				<span
-					className={`${textMakeup} text-shadow-accent-orange-bold`}
+					className={`${textMakeup} text-shadow-accent-orange-dark`}
+				>
+					Backend & Frontend
+				</span>{' '}
+				·{' '}
+				<span
+					className={`${textMakeup} text-shadow-accent-orange-dark`}
 				>
 					UI/UX Designer
 				</span>{' '}
 				·{' '}
 				<span
-					className={`${textMakeup} text-shadow-accent-yellow-bold`}
+					className={`${textMakeup} text-shadow-accent-yellow-dark`}
 				>
-					Sysadmin
+					Sysadmin & DevOps
 				</span>{' '}
 				·{' '}
-				<span className={`${textMakeup} text-shadow-accent-blue-bold`}>
+				<span className={`${textMakeup} text-shadow-accent-blue-dark`}>
 					Data Analyst
 				</span>{' '}
 				·{' '}
-				<span className={`${textMakeup} text-shadow-accent-green-bold`}>
+				<span className={`${textMakeup} text-shadow-accent-green-dark`}>
 					Scripting Expert
 				</span>{' '}
 				·{' '}
-				<span className={`${textMakeup} text-shadow-accent-teal-bold`}>
+				<span className={`${textMakeup} text-shadow-accent-teal-dark`}>
 					FOSS Advocate
 				</span>{' '}
 				·{' '}
 				<span
-					className={`${textMakeup} text-shadow-accent-purple-bold`}
+					className={`${textMakeup} text-shadow-accent-purple-dark`}
 				>
 					Embedded Enthusiast
 				</span>{' '}
 				·{' '}
 				<span
-					className={`${textMakeup} text-shadow-accent-purple-bold`}
+					className={`${textMakeup} text-shadow-accent-purple-dark`}
 				>
 					Unix Philosopher
 				</span>
