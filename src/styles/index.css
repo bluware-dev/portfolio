@@ -23,8 +23,11 @@
 /* 3. Base - Configuración global y reset selectivo */
 @import './base.css';
 
-/* 4. Utilidades - Clases helper responsive */
+/* 4. Utilidades - Utilidades generales */
 @import './utilities.css';
 
-/* 5. Animaciones - Keyframes y motion (último por performance) */
+/* 5. Utilidades - Responsividad dedicada */
+@import './responsive.css';
+
+/* 6. Animaciones - Keyframes y motion (último por performance) */
 @import './animations.css';

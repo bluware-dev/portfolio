@@ -1,7 +1,6 @@
 /**
  * utilities.css
- * Clases de utilidad responsive y componentes helper
- * Enfoque mobile-first con progressive enhancement
+ * Clases de utilidad
  */
 
 @layer utilities {
@@ -15,104 +14,5 @@
 	 */
 	.shadow-svg {
 		filter: var(--shadow-svg);
-	}
-
-	/* ==========================================
-	 * TRANSICIONES RESPONSIVE - Layout adaptativo
-	 * ========================================== */
-
-	/**
-	 * Header responsive con transición suave
-	 * Transform-origin optimizado para animaciones fluidas
-	 */
-	.responsive-h {
-		transition: transform 0.5s ease;
-		transform-origin: top;
-	}
-
-	/* ==========================================
- 	* ESPACIADO RESPONSIVE - Sistema clamp()
- 	* ========================================== */
-
-	/**
- 	* Padding-top responsivo post-navbar
- 	* Regla: siempre entre ~10% y ~20% de la altura de pantalla
- 	* Ajusta según altura: bajo => menos, alto => más.
- 	*/
-	.responsive-pt {
-		/* base: entre 10% y 20%, fluido */
-		padding-top: clamp(10vh, 18vh, 20vh);
-	}
-
-	/* Ajustes progresivos: más altura, más respiro */
-	@media (min-height: 800px) {
-		.responsive-pt {
-			padding-top: clamp(12vh, 16vh, 20vh);
-		}
-	}
-
-	/* Pantallas grandes/anchas: controlamos para que no se dispare */
-	@media (min-height: 1080px), (min-width: 1440px) {
-		.responsive-pt {
-			padding-top: clamp(10vh, 12vh, 15vh);
-		}
-	}
-
-	/* Mobile estricto: mantener el rango, no achicar */
-	@media (max-width: 768px) and (max-height: 1024px) {
-		.responsive-pt {
-			padding-top: clamp(10vh, 14vh, 20vh);
-		}
-	}
-
-	/**
-	 * Margin-top adaptativo con fallback para pantallas bajas
-	 * Mobile-first con media query específica para altura
-	 * Usado en: ProjectCTA y secciones not-sm
-	 */
-	.responsive-mt {
-		margin-top: clamp(2dvh, 4dvh, 12dvh);
-	}
-
-	/**
-	 * Override para pantallas con altura limitada (<600px)
-	 * Transform negativo para optimizar uso del espacio vertical
-	 */
-	@media (max-width: 400px) and (max-height: 600px),
-		(max-width: 380px) and (max-height: 800px) {
-		.responsive-cta {
-			transform: translateY(-2dvh);
-			margin-top: 0;
-		}
-	}
-
-	/**
-	 * Override con tweaks especificos para pantallas no responsivas
-	 * Esconde el boton CTA -> Comportamiento tipo clase 'hidden'
-	 */
-	@media (max-width: 412px) and (max-height: 600px),
-		(max-width: 355px) and (max-height: 860px),
-		(width: 360px) and (height: 740px),
-		/* Galaxy S8 */ (max-width: 400px) and (max-height: 635px),
-		(max-width: 412px) and (max-height: 412px) {
-		.responsive-cta {
-			opacity: 0;
-			pointer-events: none;
-		}
-	}
-
-	/* ==========================================
-	 * RESPONSIVE TWEAKS
-	 * ========================================== */
-
-	/**
-	 * Override para pantallas con ancho no responsivo (<360px)
-	 * Escala -15% el H1 principal para evitar salir del layout
-	 */
-	@media (max-width: 360px) {
-		.scale-unresponsive-title {
-			transform: scale(0.85);
-			transform-origin: top center; /* o center según lo que quieras */
-		}
 	}
 }
