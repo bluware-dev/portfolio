@@ -21,7 +21,7 @@ export default function ProjectsCategories() {
 	const activeItems = projects[activeCat] || [];
 
 	return (
-		<section className="w-full origin-top">
+		<section className="w-full origin-top not-sm:text-xl">
 			<ProjectNav
 				categories={categories}
 				activeCat={activeCat}
