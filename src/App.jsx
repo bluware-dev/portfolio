@@ -8,6 +8,7 @@ import { FirstRenderProvider } from '@/context/FirstRenderProvider';
 
 import ContactPage from '@/pages/ContactPage';
 import HomePage from '@/pages/HomePage';
+import NotFoundPage from '@/pages/NotFoundPage';
 import ProjectsPage from '@/pages/ProjectsPage';
 
 /**
@@ -36,6 +37,7 @@ export default function App() {
 							element={isReady && <ContactPage />}
 						/>
 					</Route>
+					<Route path="*" element={<NotFoundPage />} />
 				</Routes>
 			</FirstRenderProvider>
 		</>
