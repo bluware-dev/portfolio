@@ -36,7 +36,7 @@ export default function DeliveryEgg() {
 	return (
 		// NOTA: Usar `delivery['clave']` de forma directa se considera valido.
 		// Si la orden aún no se entregó, el valor de la clave es `undefined` <- falsy.
-		<div className="mt-[25vh] h-fit items-center text-center">
+		<div className="mt-[25svh] h-fit items-center text-center">
 			<p className="p-10 text-6xl">Testing Data Deliver</p>
 			<div className={delivery['testing-tailwind']}>
 				{delivery['testing-jsx']}

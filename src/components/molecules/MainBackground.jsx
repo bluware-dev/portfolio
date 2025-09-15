@@ -70,9 +70,9 @@ export default function MainBackground({ isUnresponsive, onBypass }) {
 
 	// Fondo normal
 	return (
-		<Ghost layer={-10} className="top-0 left-0 h-[100vh] w-full">
+		<Ghost layer={-10} className="top-0 left-0 h-[100svh] w-full">
 			<Background
-				className="h-[60vh] w-full sm:h-[70vh] md:h-[85vh]"
+				className="h-[60svh] w-full sm:h-[70svh] md:h-[85svh]"
 				src="/images/wallpaper.png"
 			/>
 			<div className="mx-auto h-100 w-full bg-gradient-to-b from-[#1D2021] to-20%" />

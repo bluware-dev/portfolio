@@ -35,7 +35,7 @@ export default function NotFoundPage() {
 
 	return (
 		<div
-			className={`grid h-[75vh] transform place-items-center transition duration-500 ${
+			className={`grid h-[75svh] transform place-items-center transition duration-500 ${
 				delivery['intro'] ? 'opacity-100' : 'opacity-0'
 			}`}
 		>
