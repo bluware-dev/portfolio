@@ -1,4 +1,4 @@
-import React, { useId, useCallback } from 'react';
+import { useId, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Bar from '@/components/atoms/Bar';
