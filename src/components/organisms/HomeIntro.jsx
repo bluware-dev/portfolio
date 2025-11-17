@@ -67,11 +67,10 @@ export default function HomeIntro() {
 							<span className="to-accent-blue-dark bg-gradient-to-b from-blue-400 bg-clip-text font-bold text-transparent">
 								Blu
 							</span>
-							<span className="nf-md-cat text-accent-yellow text-7xl font-normal"></span>
-							<span className="nf-fa-code from-accent-red to-accent-red-dark mr-3 ml-2 flex items-center bg-gradient-to-b bg-clip-text font-normal text-transparent">
-								{''}
+
+							<span className="from-accent-red to-accent-red-dark mr-3 ml-2 flex items-center bg-gradient-to-b bg-clip-text text-transparent">
+								{'</>'}
 							</span>
-							<span className="nf-md-web text-accent-yellow mr-2 font-normal"></span>
 
 							<span className="from-lg-3 to-lg-0 bg-gradient-to-b bg-clip-text font-bold text-transparent">
 								Web
@@ -84,7 +83,7 @@ export default function HomeIntro() {
 			{/* "Portfolio" Rotate */}
 			<div
 				style={{ willChange: 'transform' }}
-				className={`h-5 text-3xl sm:text-4xl ${
+				className={`h-5 text-3xl ${
 					isFirstRender.current
 						? 'delay-[1500ms] duration-250'
 						: 'delay-[100ms] duration-250'
