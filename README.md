@@ -104,6 +104,8 @@ pnpm install && pnpm dev
 
 **[Ver Análisis Completo con Gemini](https://g.co/gemini/share/2b2790735716)** - Auditoría detallada de arquitectura, patterns y decisiones de ingeniería.
 
+**[Ver Documentacion Generada por DeepWiki](https://deepwiki.com/bluware-dev/portfolio)** - Documentacion generada por IA de arquitectura con diagramas incluidos.
+
 ## 📄 Licencia
 
 Este proyecto está bajo la **BSD 3-Clause License**. Consulta el archivo [LICENSE](LICENSE) para más detalles.
