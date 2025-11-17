@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 import useDelivery from '@/hooks/useDelivery';
 
@@ -73,6 +74,18 @@ export default function ContactPage() {
 		<div
 			className={`transform transition duration-500 ${delivery['intro'] ? 'opacity-100' : 'opacity-0'}`}
 		>
+			<Helmet>
+				<title>Contacto | Elian Jofre (Blu)</title>
+				<meta
+					name="description"
+					content="Contactame para proyectos o colaboraciones - @bluware.dev"
+				/>
+				<link
+					rel="canonical"
+					href="https://bluware.vercel.app/contact"
+				/>
+			</Helmet>
+
 			<div className="bg-dg-1/80 container mx-auto max-w-2xl rounded border p-4 pb-1.5 drop-shadow-2xl not-sm:pb-3">
 				<header className="mb-2 text-center">
 					<h1 className="text-lg-2 text-shadow-accent-red-dark font-bigblueterm text-4xl text-shadow-lg">

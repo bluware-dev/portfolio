@@ -1,3 +1,4 @@
+import { HelmetProvider } from 'react-helmet-async';
 import { Route, Routes } from 'react-router-dom';
 
 import LayoutPage from '@/components/templates/LayoutPage';
@@ -24,22 +25,31 @@ export default function App() {
 
 	return (
 		<>
-			<FirstRenderProvider>
-				<Routes>
-					<Route path="/" element={<LayoutPage isReady={isReady} />}>
-						<Route index element={<HomePage />} />
+			<HelmetProvider>
+				<FirstRenderProvider>
+					<Routes>
 						<Route
-							path="/projects"
-							element={isReady && <ProjectsPage />}
-						/>
-						<Route
-							path="/contact"
-							element={isReady && <ContactPage />}
-						/>
-					</Route>
-					<Route path="*" element={<NotFoundPage />} />
-				</Routes>
-			</FirstRenderProvider>
+							path="/"
+							element={<LayoutPage isReady={isReady} />}
+						>
+							<Route index element={<HomePage />} />
+							<Route
+								path="/about"
+								element={isReady && <HomePage />}
+							/>
+							<Route
+								path="/projects"
+								element={isReady && <ProjectsPage />}
+							/>
+							<Route
+								path="/contact"
+								element={isReady && <ContactPage />}
+							/>
+						</Route>
+						<Route path="*" element={<NotFoundPage />} />
+					</Routes>
+				</FirstRenderProvider>
+			</HelmetProvider>
 		</>
 	);
 }

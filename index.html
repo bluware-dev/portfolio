@@ -1,28 +1,97 @@
 <!doctype html>
 <html lang="es">
 	<head>
+		<!-- Init Tags -->
 		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="theme-color" content="#282828" />
 		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+		<!-- SEO Core -->
+		<meta name="author" content="Elian Jofre (Blu)" />
+		<title>Elian Jofre (Blu) | Full-Stack Software Developer</title>
+		<meta
+			name="description"
+			content="Portfolio de Elian Jofre (Blu), desarrollador de software enfocado en web apps rápidas y escalables. Experiencia en React, Astro, Node.js y Python."
+		/>
+		<link rel="canonical" href="https://bluware.vercel.app" />
+
+		<!-- Open Graph -->
+		<meta
+			property="og:title"
+			content="Elian Jofre (Blu) | Full-Stack Software Developer"
+		/>
+		<meta
+			property="og:description"
+			content="Proyectos y stack moderno. Disponible para colaboraciones."
+		/>
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://bluware.vercel.app" />
+		<meta
+			property="og:image"
+			content="https://bluware.vercel.app/og-image.png"
+		/>
+		<meta
+			property="og:image:alt"
+			content="Portada del portfolio de Elian Jofre (Blu)"
+		/>
+
+		<meta property="og:locale" content="es_AR" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:creator" content="@BluwareDev" />
+
+		<!-- JSON-LD -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Elian Jofre",
+				"alternateName": [
+					"Blu",
+					"Bluware",
+					"Blu4Web",
+					"Elian Blu",
+					"Bluware Dev",
+					"Bluware Web",
+					"Elian Bluware"
+				],
+				"jobTitle": "Full-Stack Software Developer",
+				"worksFor": {
+					"@type": "Organization",
+					"name": "Blu4Web",
+					"url": "https://blu4web.vercel.app"
+				},
+				"url": "https://bluware.vercel.app",
+				"sameAs": [
+					"https://github.com/bluware",
+					"https://linkedin.com/in/bluware",
+					"https://instagram.com/bluware.dev",
+					"https://instagram.com/blu4web",
+					"https://blu4web.vercel.app"
+				]
+			}
+		</script>
+
+		<!-- Prefetch DNS -->
+		<link rel="preconnect" href="https://www.nerdfonts.com" crossorigin />
+		<link rel="dns-prefetch" href="https://www.nerdfonts.com" />
 		<link
 			rel="preload"
-			as="style"
 			href="https://www.nerdfonts.com/assets/css/webfont.css"
-			onload="this.onload=null;this.rel='stylesheet'"
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet';this.removeAttribute('onload')"
 		/>
+
 		<noscript>
 			<link
 				rel="stylesheet"
 				href="https://www.nerdfonts.com/assets/css/webfont.css"
 			/>
 		</noscript>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Bluware Portfolio</title>
-		<meta
-			name="description"
-			content="Portfolio personal de Bluware, mostrando proyectos y stack tecnológico."
-		/>
 	</head>
+
 	<body>
 		<div id="root"></div>
 		<script type="module" src="/src/main.jsx"></script>

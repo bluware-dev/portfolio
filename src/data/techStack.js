@@ -79,7 +79,7 @@ export const techIcons = [
 		type: 'font',
 		icon: 'nf-dev-astro',
 		color: 'text-[#FF5D01]',
-		iconClassName: 'text-shadow-lg text-shadow-pearl scale-150',
+		iconClassName: 'text-shadow-lg text-shadow-pearl',
 	},
 	{
 		name: 'TailwindCSS',
